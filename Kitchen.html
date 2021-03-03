@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Airstream</title>
+    <link rel="stylesheet" href="mySpin.css" />
+    <link rel="stylesheet" href="Kitchen.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no" />
+  </head>
+
+  <body>
+    <div class="makeCenter">
+      <div class="mySpinSet enhanceTool"></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spritespin/3.4.3/spritespin.js"></script>
+    <script src="mySpin.js"></script>
+    <script type="application/javascript">
+      //////////////////////////
+      // init IIFE
+      //////////////////////////
+      (function () {
+        "use strict";
+        console.clear();
+        /*******************************************************************************************
+         * images
+         *******************************************************************************************/
+        var eImagesFolder = "assets/kitchen/";
+        /*******************************************************************************************
+         * Segments
+         *******************************************************************************************/
+        var eSegments = {
+          A: {
+            frame: 55,
+            position: [10, 0],
+            color: "#F8B6BB",
+            icon: "title-icon.png",
+            title: "Kitchen",
+            bullets: [],
+            topics: [
+              {
+                frame: 55,
+                position: [344, 451],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Oven",
+                body:
+                  "There’s more than one set of ovens in the kitchen. That way, Mom and her staff can make enough food for everyone in the restaurant. They can bake 80 pieces of salmon at once! ",
+              },
+              {
+                frame: 55,
+                position: [211, 509],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Made with Love",
+                body:
+                  "Mom watches the sunrise through the kitchen window. She starts baking at 5 am, and she’s in charge until the kitchen closes at 8 pm. Chefs have long days, but cooking is Mom’s passion. (It’s mine too, but I don’t have to get up at 5 am.)",
+              },
+              {
+                frame: 55,
+                position: [310, 310],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Sink",
+                body:
+                  "This is called a “farmhouse sink.” It’s deeper than typical kitchen sinks, which means it’s easier to wash big pots and pans or lots of dishes. (Luckily there’s a dishwasher in the kitchen, too.)",
+              },
+              {
+                frame: 55,
+                position: [122, 387],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Fresh Produce",
+                body:
+                  "My mom’s restaurant is “farm to table,” which means we grow many of the ingredients right here on our farm. What we can’t grow ourselves we get from other farms in the area. ",
+              },
+            ],
+          },
+          B: {
+            frame: 107,
+            position: [10, 0],
+            color: "#F8B6BB",
+            icon: "title-icon.png",
+            title: "Dinning Area",
+            bullets: [],
+            topics: [
+              {
+                frame: 107,
+                position: [405, 346],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Bench",
+                body:
+                  "I help with all the decorating at Pleasant View Farms. We furnished the outdoor seating space with long tables and benches so that there’s plenty of room for people to gather for a meal and linger for conversation.  ",
+              },
+
+              {
+                frame: 107,
+                position: [305, 479],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Crème Brulee",
+                body:
+                  "My mom has taught me to make some amazing dishes—including crème brulee. It’s a creamy custard topped with a hard layer of caramel. We use a kitchen torch to make the topping (okay, my mom does that part). When I developed a dairy intolerance, Mom and I came up with a dairy-free version of crème brulee.",
+              },
+              {
+                frame: 107,
+                position: [280, 406],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Menu",
+                body:
+                  "Unlike restaurants that serve the same thing all the time, Mom’s menu changes. She cooks with what’s in season so that everything is super fresh –and totally delicious!",
+              },
+              {
+                frame: 107,
+                position: [141, 303],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Light String",
+                body:
+                  "The courtyard patio is the perfect place for an outdoor meal in the summer. At night, guests dine by the glow of the lights under the gazebo while they watch the sun set behind the Shawnangunk Ridge mountains.",
+              },
+            ],
+          },
+          C: {
+            frame: 23,
+            position: [10, 0],
+            color: "#F8B6BB",
+            icon: "title-icon.png",
+            title: "Service Window",
+            bullets: [],
+            topics: [
+              {
+                frame: 23,
+                position: [202, 580],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Bell",
+                body:
+                  "When an order is ready, the cook rings the bell to let the server know. When the restaurant is closed, Mom rings the bell to tell our family that our dinner is ready. ",
+              },
+              {
+                frame: 23,
+                position: [406, 549],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Eggs",
+                body:
+                  "All of the eggs that Mom uses in the kitchen come from our very own chickens. It’s my job to gather the eggs from the nests. It’s also my job to clean the chicken coop. You can guess which job is more fun. ",
+              },
+              {
+                frame: 23,
+                position: [376, 650],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Chalkboard",
+                body:
+                  "I get to write the day’s specials on the chalkboard. Even better: I get to help mom make up some of the recipes. ",
+              },
+              {
+                frame: 23,
+                position: [329, 493],
+                icon: "item-icon.png",
+                color: "#494B65",
+                title: "Cart",
+                body:
+                  "We offer tea and treats to our B and B guests every afternoon at 4:00. I use this cart to get goodies from the kitchen to the common room without making a mess (as long as my little brother isn’t around to cause trouble). ",
+              },
+            ],
+          },
+        };
+
+        var eBuffer = 7;
+        var eHeight = 619;
+        var eWidth = 1000;
+        var eFrames = 120;
+
+        $(".mySpinSet").makeSpin({
+          eImagesFolder,
+          eSegments,
+          eBuffer,
+          eHeight,
+          eWidth,
+          eFrames
+        });
+      })();
+    </script>
+  </body>
+</html>

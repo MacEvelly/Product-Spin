@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/chevron/back</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.08104343,14.3175858 L0.326495294,8.18524287 C0.109197586,7.95330325 0,7.66923579 0,7.33304048 C0,6.99684517 0.109197586,6.71336342 0.326495294,6.48025239 L6.08104343,0.347909429 C6.29834114,0.11596981 6.56502469,0 6.87944789,0 C7.19441982,0 7.46055464,0.11596981 7.67840108,0.347909429 L8.34017137,1.0548567 C8.55801781,1.28679632 8.66666667,1.57144949 8.66666667,1.90705909 C8.66666667,2.2432544 8.55801781,2.52732186 8.34017137,2.75984718 L4.0512853,7.33772613 L8.34017137,11.9068195 C8.55801781,12.1452019 8.66666667,12.4310264 8.66666667,12.7642932 C8.66666667,13.0963886 8.55801781,13.3792846 8.34017137,13.6112243 L7.67840108,14.3175858 C7.46055464,14.5506969 7.19441982,14.6666667 6.87944789,14.6666667 C6.56502469,14.6666667 6.29834114,14.5506969 6.08104343,14.3175858" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="kitchen-spin-desktop" transform="translate(-511.000000, -794.000000)">
+            <g id="controls" transform="translate(508.000000, 788.000000)">
+                <g id="link/arrow/back/large">
+                    <g id="icon/chevron/left" transform="translate(0.000000, 6.000000)">
+                        <g id="color/ui/dark-gray" transform="translate(3.333333, 0.666667)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#333333" xlink:href="#path-1"></use>
+                            <g id="color/mb/berry" mask="url(#mask-2)" fill="#C70A4C">
+                                <g transform="translate(-3.333333, -0.666667)" id="color">
+                                    <rect x="0" y="0" width="16" height="16"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

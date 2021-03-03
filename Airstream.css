@@ -1,0 +1,14 @@
+/*********************************************
+Second style sheet
+**********************************************/
+.mySpinSet {
+  width: 1000px;
+  height: 697px;
+}
+.mySpinSet .LuciBTN:hover {
+  background-color: #e45980;
+}
+.mySpinSet .LuciBTN {
+  background-color: #c11f4c;
+  box-shadow: 0 4px 0 0 #c18898;
+}

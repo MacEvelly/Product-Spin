@@ -1,0 +1,107 @@
+.mySpinSet .LuciBTN {
+    height: 15px;
+    line-height: 15px;
+    color: #c70a4c;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 17px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 100%;
+}
+.mySpinSet .btnHolder {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .mySpinSet .spinPrev::before {
+    background-image: url(assets/kitchen/ux/back.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 8px;
+    width: 10px;
+    height: 15px;
+    content: "";
+  }
+  .mySpinSet .spinNext::after {
+    background-image: url(assets/kitchen/ux/next.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 8px;
+    width: 10px;
+    height: 15px;
+    content: "";
+  }
+.mySpinSet .msgHolder .icon img {
+    height: 100%;
+    transform: translate(-45%, -50%);
+  }
+.mySpinSet{
+  font-family: "Source Sans Pro", sans-serif;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-gap: 6px;
+  margin: auto;
+  width: 1000px;
+  height: 697px;
+  font-size: 18px;
+}
+.mySpinSet .msgHolder .msgBox .close{
+    font-size: 0;
+}
+.mySpinSet .msgHolder .msgBox .close::after {
+  background-image: url(assets/kitchen/ux/solid.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  content: "";
+}
+.mySpinSet .msgHolder .msgBox {
+    border-radius: 3px;
+}
+.mySpinSet .msgHolder {
+    transform-origin: top left;
+}
+.mySpinSet > div {
+  grid-column: 1;
+  grid-row: 1;
+}
+@media only screen and (max-width: 460px) {
+  .mySpinSet {
+    font-size: 28px;
+  }
+  .topic {
+    justify-content: start;
+    align-items: start;
+    padding-top: 95px;
+  }
+  .mySpinSet .msgHolder .msgBox {
+    max-width: 100%;
+  }
+  .mySpinSet .msgHolder[style*="visibility: hidden;"] {
+    display: none !important;
+  }
+  .mySpinSet .msgHolder {
+    position: initial;
+    min-height: 73px;
+    max-width: 72%;
+    transform: scale(1.25) !important;
+  }
+  .mySpinSet .LuciBTN {
+    font-size: 175%;
+  }
+
+  .mySpinSet .spinPrev::before,
+  .mySpinSet .spinNext::after {
+    width: 20px;
+    height: 30px;
+  }
+}

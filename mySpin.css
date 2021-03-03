@@ -1,0 +1,133 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.makeCenter {
+  width: 100%;
+  height: 100%;
+}
+.mySpinSet {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform-origin: top left;
+}
+.mySpinSet .spritespin-canvas {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto !important;
+  width: auto !important;
+  left: auto !important;
+}
+.mySpinSet .spritespin {
+  height: auto !important;
+  width: auto !important;
+  display: inline-block;
+  min-width: 100%;
+  min-height: 100%;
+}
+.mySpinSet .msgHolder {
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+.mySpinSet .msgHolder .msgBox {
+  border: 3px solid;
+  border-radius: 15px;
+  position: relative;
+  padding: 10px 50px 10px 75px;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  max-width: 350px;
+}
+.mySpinSet .msgHolder .icon {
+  position: absolute;
+  width: 80px;
+  height: 76px;
+  left: 0;
+  top: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.mySpinSet .msgHolder .icon .iconBG {
+  height: 100%;
+  width: 100%;
+}
+.mySpinSet .msgHolder .icon img {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mySpinSet .msgHolder.segment .close {
+  display: none;
+}
+.mySpinSet .msgHolder.segment .msgBox {
+  padding: 10px 20px 10px 75px;
+}
+.mySpinSet .msgHolder .msgBox .close {
+  font-family: Helvetica, Arial, "sans-serif";
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+.mySpinSet .msgHolder h2 {
+  margin: 0;
+  font-family: Helvetica, Arial, "sans-serif";
+  font-size: 22px;
+  font-weight: bold !important;
+  padding: 0;
+}
+.mySpinSet .msgHolder p {
+  color: #000000;
+  font-family: Helvetica, Arial, "sans-serif";
+}
+.mySpinSet .btnHolder {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+.mySpinSet .myButton {
+  font-size: 125%;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  background-color: #1f4388;
+  box-shadow: 2px 2px 15px #888888;
+  margin: 0 5px;
+  overflow: hidden;
+  border: 2px solid white;
+  text-align: center;
+  padding: 10px 70px;
+  cursor: pointer;
+}
+.mySpinSet .habitatPrev,
+.mySpinSet .habitatNext {
+  width: 150px;
+  margin: 0 10px;
+}
+.mySpinSet .LuciBTN {
+  color: #ffffff;
+  font-family: Helvetica, Arial, "sans-serif";
+  padding: 17px;
+  display: inline-block;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.mySpinSet .spinPrev,
+.spinNext {
+  width: 150px;
+  margin: 0 10px;
+}
+

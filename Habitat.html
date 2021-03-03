@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Habitat</title>
+    <link rel="stylesheet" href="mySpin.css" />
+    <link rel="stylesheet" href="Habitat.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no" />
+  </head>
+
+  <body>
+    <div class="makeCenter">
+      <div class="mySpinSet enhanceTool"></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spritespin/3.4.3/spritespin.js"></script>
+    <script src="mySpin.js"></script>
+    <script type="application/javascript">
+      //////////////////////////
+      // init IIFE
+      //////////////////////////
+      (function () {
+        "use strict";
+        console.clear();
+        /*******************************************************************************************
+         * Audio
+         *******************************************************************************************/
+        var sfxPath = "assets/mars/audio/";
+        var sfx = {
+          Printer: new Audio(sfxPath + "Habitat_3D_Printer.mp3"),
+          Control: new Audio(sfxPath + "Habitat_Control_Panel.mp3"),
+          Exercise: new Audio(
+            sfxPath + "Habitat_Exercise_Equipment-Sheets.mp3"
+          ),
+          Headset: new Audio(sfxPath + "Habitat_Headset.mp3"),
+          Intro: new Audio(sfxPath + "Habitat_Intro_VO.mp3"),
+          Laptop: new Audio(sfxPath + "Habitat_Laptop_Email.mp3"),
+          Microscope: new Audio(sfxPath + "Habitat_Microscope.mp3"),
+          Food: new Audio(sfxPath + "Habitat_Space_Food.mp3"),
+          Garden: new Audio(sfxPath + "Habitat_Space_Garden.mp3"),
+          Center: new Audio(
+            sfxPath + "Habitat_Trigger_4_Control_Center_Video_VO.mp3"
+          ),
+          TV: new Audio(sfxPath + "Habitat_TV_Screen.mp3"),
+          VR: new Audio(sfxPath + "Habitat_Virtual_Reality.mp3"),
+        };
+        //$( document ).ready(()=>sfx["Intro"].play())
+        //if (!window.frameElement) sfx["Intro"].play();
+
+        function stopIntro() {
+          sfx["Intro"].pause();
+        }
+        $("body").on("stopIntro", stopIntro);
+
+        /*******************************************************************************************
+         * images
+         *******************************************************************************************/
+        var eImagesFolder = "assets/mars/";
+        /*******************************************************************************************
+         * Segments
+         *******************************************************************************************/
+        var secA = 56;
+        var secB = 22;
+        var secC = 91;
+        var topicColor = [
+          "#00A77E",
+          "#00AEEF",
+          "#6DCFF6",
+          "#6F2C91",
+          "#008B7C",
+          "#30347E",
+          "#30357F",
+          "#B41E8E",
+          "#F04E3E",
+        ];
+        var eSegments = {
+          A: {
+            frame: 56,
+            position: [10, 0],
+            color: "#F04E3E",
+            icon: "Icon_A.svg",
+            iconBG: "Hex_F04E3E.png",
+            title: "Communications Center",
+            bullets: [
+              "TV monitor & screens",
+              "headset",
+              "control panel w/ joystick",
+              "laptop & screens",
+              "laptop arm",
+              "satellite",
+            ],
+            topics: [
+              {
+                frame: secA,
+                position: [330, 485],
+                icon: "Icon_Rocks.svg",
+                iconBG: "Hex_"+topicColor[0].replace("#","")+".png",
+                color: topicColor[0],
+                audio: sfx["Control"],
+                title: "Control Panel",
+                body:
+                  "Driving a rover over the rocky Mars landscape is harder than I expected.",
+              },
+              {
+                frame: secA,
+                position: [220, 492],
+                icon: "Icon_Phone.svg",
+                iconBG: "Hex_"+topicColor[1].replace("#","")+".png",
+                color: topicColor[1],
+                audio: sfx["Headset"],
+                title: "Headset",
+                body:
+                  "Luciana to Mission Control. Do you copy? I am ready for my mission!",
+              },
+              {
+                frame: secA,
+                position: [285, 285],
+                icon: "Icon_Glasses.svg",
+                iconBG: "Hex_"+topicColor[2].replace("#","")+".png",
+                color: topicColor[2],
+                title: "Virtual Reality",
+                audio: sfx["VR"],
+                body:
+                  "Virtual reality makes it possible to go anywhere—even Mars!—without leaving home. I'm about to do a virtual moonwalk. Wish me luck!",
+              },
+              {
+                frame: secA,
+                position: [290, 175],
+                icon: "Icon_Satellite.svg",
+                iconBG: "Hex_"+topicColor[3].replace("#","")+".png",
+                color: topicColor[3],
+                audio: sfx["Laptop"],
+                title: "Laptop Email",
+                body:
+                  "If I were actually on Mars, it would take fifteen minutes to send a message to people on Earth—and another fifteen minutes to get an answer!",
+              },
+              {
+                frame: secA,
+                position: [160, 295],
+                icon: "Icon_People.svg",
+                iconBG: "Hex_"+topicColor[4].replace("#","")+".png",
+                color: topicColor[4],
+                audio: sfx["TV"],
+                title: "Video Chat TV Screen",
+                body:
+                  "I can’t wait to go to Mars someday, but I know I’ll miss my friends and family back on Earth. ",
+              },
+            ],
+          },
+          B: {
+            frame: 22,
+            position: [10, 0],
+            color: "#008B7C",
+            icon: "Icon_B.svg",
+            iconBG: "Hex_008B7C.png",
+            title: "Science Lab",
+            bullets: [
+              "plants & plant holder",
+              "table",
+              "glove box",
+              "rock samples",
+              "soil samples",
+              "petri dishes",
+              "box of slides",
+              "booklet",
+              "microscope",
+              "test tube tray & test tubes",
+              "safety glasses",
+              "3D printer",
+              "wall hook",
+              "notes",
+              "clipboard",
+              "folder",
+            ],
+            topics: [
+              {
+                frame: secB,
+                position: [250, 435],
+                icon: "Icon_Box.svg",
+                iconBG: "Hex_"+topicColor[5].replace("#","")+".png",
+                color: topicColor[5],
+                audio: sfx["Printer"],
+                title: "3D printer",
+                body:
+                  "Imagine traveling all the way to Mars—and realizing you forgot an important tool at home! Not to worry...I can program this 3D printer to make almost anything.",
+              },
+              {
+                frame: secB,
+                position: [300, 175],
+                icon: "Icon_Microbs.svg",
+                iconBG: "Hex_"+topicColor[6].replace("#","")+".png",
+                color: topicColor[6],
+                audio: sfx["Microscope"],
+                title: "Microscope",
+                body:
+                  "Do you believe aliens exist? Some scientists think there might be life on Mars—not cute green martians with antennae, but teeny-tiny microbes that you can only see in a microscope.",
+              },
+              {
+                frame: secB,
+                position: [200, 145],
+                icon: "Icon_Food.svg",
+                iconBG: "Hex_"+topicColor[7].replace("#","")+".png",
+                color: topicColor[7],
+                audio: sfx["Garden"],
+                title: "Space Garden",
+                body:
+                  "On Mars, astronauts will have to grow their own veggies because there won’t be room to store all the food they’ll need for long missions. Time for lunch!",
+              },
+            ],
+          },
+          C: {
+            frame: 91,
+            position: [10, 0],
+            color: "#30347E",
+            icon: "Icon_C.svg",
+            iconBG: "Hex_30347E.png",
+            title: "Living Space",
+            bullets: [
+              "wall hooks",
+              "table",
+              "VR goggles",
+              "photos",
+              "storage boxes containing first aid supplies & space food/water",
+              "dumb bells",
+            ],
+            topics: [
+              {
+                frame: secC,
+                position: [350, 175],
+                icon: "Icon_Food.svg",
+                iconBG: "Hex_"+topicColor[8].replace("#","")+".png",
+                color: topicColor[8],
+                audio: sfx["Food"],
+                title: "Space Food",
+                body:
+                  "Yum, space food! My favorites are cheesy potatoes and apple cobbler—but I’d skip the shrimp cocktail. If you could bring your favorite food to space, what would it be?",
+              },
+              {
+                frame: secC,
+                position: [290, 445],
+                icon: "Icon_Health.svg",
+                iconBG: "Hex_"+topicColor[0].replace("#","")+".png",
+                color: topicColor[0],
+                audio: sfx["Exercise"],
+                title: "Exercise Equipment",
+                body:
+                  "These dumbbells strengthen my muscles here on earth—but in micro-gravity, they hardly weigh anything! Astronauts in space get their exercise on a treadmill or a stationary bicycle.",
+              },
+            ],
+          },
+        };
+        /*******************************************************************************************
+         * topics
+         *******************************************************************************************/
+
+        var eBuffer = 7;
+        var eHeight = 697;
+        var eWidth = 750;
+        var eFrames = 105;
+
+        $(".mySpinSet").makeSpin({
+          eImagesFolder,
+          eSegments,
+          eBuffer,
+          eHeight,
+          eWidth,
+          eFrames
+        });
+      })();
+    </script>
+  </body>
+</html>

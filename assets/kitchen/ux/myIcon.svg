@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c11f4c;
+      }
+    </style>
+  </defs>
+  <title>myIcon</title>
+      <circle id="myCircle" class="cls-1" cx="50" cy="50" r="47"/>
+</svg>

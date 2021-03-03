@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/chevron/next</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.33333333,7.33304067 C9.33333333,7.65965598 9.21631947,7.94529805 8.98170075,8.18938154 L2.78469364,14.3183941 C2.54948395,14.5501856 2.26463201,14.6666667 1.92954685,14.6666667 C1.59327972,14.6666667 1.30724583,14.5501856 1.07321809,14.3183941 L0.351041601,13.6124835 C0.117013867,13.3678147 0,13.0815873 0,12.7561427 C0,12.4230887 0.117013867,12.1409586 0.351041601,11.9079964 L4.97072543,7.33304067 L0.351041601,2.76745021 C0.117013867,2.52219606 0,2.23655399 0,1.91052401 C0,1.57747003 0.117013867,1.29592529 0.351041601,1.06296311 L1.07321809,0.357637919 C1.30133603,0.118822418 1.58677895,0 1.92954685,0 C2.27113278,0 2.5565757,0.118822418 2.78469364,0.357637919 L8.98170075,6.4860651 C9.21631947,6.71785662 9.33333333,7.00057203 9.33333333,7.33304067" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="kitchen-spin-desktop" transform="translate(-687.000000, -794.000000)">
+            <g id="controls" transform="translate(508.000000, 788.000000)">
+                <g id="link/arrow/forward/large" transform="translate(131.000000, 0.000000)">
+                    <g id="icon/chevron/right" transform="translate(45.000000, 6.000000)">
+                        <g id="color/ui/dark-gray" transform="translate(3.333333, 0.666667)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#333333" xlink:href="#path-1"></use>
+                            <g id="color/mb/berry" mask="url(#mask-2)" fill="#C70A4C">
+                                <g transform="translate(-3.333333, -0.666667)" id="color">
+                                    <rect x="0" y="0" width="16" height="16"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Airstream</title>
+    <link rel="stylesheet" href="mySpin.css" />
+    <link rel="stylesheet" href="Airstream.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no" />
+  </head>
+
+  <body>
+    <div class="makeCenter">
+      <div class="mySpinSet enhanceTool"></div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/spritespin/3.4.3/spritespin.js"></script>
+    <script src="mySpin.js"></script>
+    <script type="application/javascript">
+      //////////////////////////
+      // init IIFE
+      //////////////////////////
+      (function () {
+        "use strict";
+        console.clear();
+        /*******************************************************************************************
+         * Audio
+         *******************************************************************************************/
+        var sfxPath = "assets/airstream/audio/";
+        var sfx = {
+          Unused: new Audio(sfxPath + "Maryellen1.mp3"),
+          Kitchen: new Audio(sfxPath + "Maryellen2.mp3"),
+          Intro: new Audio(sfxPath + "Maryellen3.mp3"),
+          Fridge: new Audio(sfxPath + "Maryellen4.mp3"),
+          Table: new Audio(sfxPath + "Maryellen5.mp3"),
+          Cabinet: new Audio(sfxPath + "Maryellen6.mp3"),
+          Bed: new Audio(sfxPath + "Maryellen7.mp3"),
+          Awning: new Audio(sfxPath + "Maryellen8.mp3"),
+        };
+
+        //if (!window.frameElement) sfx["Intro"].play();
+
+        function stopIntro() {
+          sfx["Intro"].pause();
+        }
+        $("body").on("stopIntro", stopIntro);
+
+        /*******************************************************************************************
+         * images
+         *******************************************************************************************/
+        var eImagesFolder = "assets/airstream/";
+
+        /*******************************************************************************************
+         * Segments
+         *******************************************************************************************/
+        var eSegments = {
+          A: {
+            frame: 52,
+            position: [10, 0],
+            color: "#c11f4c",
+            icon: "innerStar.svg",
+            iconBG: "myIcon.svg",
+            title: "Inside",
+            bullets: [],
+            topics: [
+              {
+                frame: 52,
+                position: [328, 645],
+                icon: "innerStar.svg",
+                iconBG: "myIcon.svg",
+                color: "#c11f4c",
+                audio: sfx["Table"],
+                title: "DIG IN!",
+                body:
+                  "This is where we eat. The table folds out, like this. With six kids in the family, we have to eat in shifts.",
+              },
+              {
+                frame: 52,
+                position: [123, 294],
+                icon: "innerStar.svg",
+                iconBG: "myIcon.svg",
+                color: "#c11f4c",
+                audio: sfx["Cabinet"],
+                title: "SCOOTER'S STORAGE",
+                body:
+                  "Here’s the cabinet where I keep Scooter's dog food. It’s my job to feed him on our trips.",
+              },
+              {
+                frame: 52,
+                position: [290, 395],
+                icon: "innerStar.svg",
+                iconBG: "myIcon.svg",
+                color: "#c11f4c",
+                audio: sfx["Bed"],
+                title: "SWEET DREAMS",
+                body:
+                  "Here’s my cute little bed. Doesn’t it look cozy? I love snuggling up after a big day of adventure!",
+              },
+              {
+                frame: 52,
+                position: [330, 287],
+                icon: "innerStar.svg",
+                iconBG: "myIcon.svg",
+                color: "#c11f4c",
+                audio: sfx["Fridge"],
+                title: "CATCH OF THE DAY",
+                body:
+                  "Dad says he’s going to fish for our supper, but just in case he doesn’t catch anything, here’s the fridge.",
+              },
+              {
+                frame: 52,
+                position: [250, 135],
+                icon: "innerStar.svg",
+                iconBG: "myIcon.svg",
+                color: "#c11f4c",
+                audio: sfx["Kitchen"],
+                title: "WHAT'S COOKING",
+                body:
+                  "Here’s the kitchen, with a sweet little stove and sink. My big sister Joan says she’s going to learn to cook this summer, but she usually gets distracted by whatever book she’s reading, and tends to burn she food. Maybe she should practice on her boyfriend Jerry instead of us.",
+              },
+            ],
+          },
+          B: {
+            frame: 0,
+            position: [10, 0],
+            color: "#c11f4c",
+            icon: "innerStar.svg",
+            iconBG: "myIcon.svg",
+            title: "Outside",
+            bullets: [],
+            topics: [
+              {
+                frame: 0,
+                position: [130, 175],
+                icon: "innerStar.svg",
+                iconBG: "myIcon.svg",
+                color: "#c11f4c",
+                audio: sfx["Awning"],
+                title: "RELAXATION STATION",
+                body:
+                  "When we arrive at a camping spot, we can set up this awning to make a nice place to sit and relax after a big day of hiking.",
+              },
+            ],
+          },
+        };
+
+        var eBuffer = 7;
+        var eHeight = 619;
+        var eWidth = 1000;
+        var eFrames = 105;
+
+        $(".mySpinSet").makeSpin({
+          eImagesFolder,
+          eSegments,
+          eBuffer,
+          eHeight,
+          eWidth,
+          eFrames,
+        });
+      })();
+    </script>
+  </body>
+</html>

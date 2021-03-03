@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Source+Sans+Pro");
+
+html,
+body {
+  background: #fff;
+  background-image: url(assets/mars/ux/BGtile2.jpg);
+  background-color: black;
+}
+.makeCenter {
+  text-align: center;
+  font-size: 18px;
+}
+.mySpinSet {
+  width: 750px;
+  height: 697px;
+}
+.mySpinSet .LuciBTN:hover {
+  background-color: #038fc3;
+}
+.mySpinSet .spritespin-canvas {
+  border-radius: 375px 375px 150px 150px;
+  -webkit-box-shadow: 0 0 100px 56px black;
+  -moz-box-shadow: 0 0 100px 56px black;
+  box-shadow: 0 0 100px 56px black;
+}
+.mySpinSet .LuciBTN {
+  background-color: #00a9e8;
+  box-shadow: 0 4px 0 0 #6dcff6;
+}
+
+@media screen and (max-width: 767px) {
+  .mySpinSet.lPlay .topic,
+  .mySpinSet.eCom .topic {
+    display: none;
+  }
+  .mySpinSet .btnHolder {
+    with: 100% !important;
+  }
+  .mySpinSet .habitatPrev,
+  .mySpinSet .habitatNext {
+    width: 75px;
+    margin: 0 10px;
+  }
+}
